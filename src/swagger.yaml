@@ -1,0 +1,115 @@
+swagger: '2.0'
+info:
+  description: API for Thumbnail generation microservice
+  version: 1.0.0
+  title: Microservice
+  # My Contact Info
+  contact:
+    email: yemiwebby@gmail.com
+basePath: /api/v1
+
+# tags are used for organizing operations
+tags:
+- name: Authentication
+  description: Operations to authenticate users and generate Token
+- name: JSON Patch
+  description: Apply JSON patch to a valid JSON Object
+- name: Create Thumbnail
+  description: Create thumbnail from a public image URL
+
+paths:
+
+  /auth/login:
+    post:
+      tags:
+      - Authentication
+      summary: login a user
+      description: Log in a user to the application and generate token
+      produces:
+      - application/json
+      parameters:
+      - name: username
+        in: formData
+        description: username of the user
+        type: string
+        required: true
+      - name: password
+        in: formData
+        description: password of the user
+        type: string
+        required: true
+      responses:
+        200:
+          description: Success, user is logged in
+          examples:
+            application/json:
+              error: false
+              message: 'logged in successfully'
+        400:
+          description: Invalid Input
+          examples:
+            application/json:
+              error: true
+              message: Unable to login
+
+
+  /json/patch:
+    post:
+      tags:
+      - JSON Patch
+      summary: Apply JSON Patch
+      description: Apply JSON patch to a valid JSON Object
+      produces:
+      - application/json
+      parameters:
+      - name: object
+        in: formData
+        description: original object
+        type: JSON
+        required: true
+      - name: patch
+        in: formData
+        description: JSON patch
+        type: JSON
+        required: true
+      responses:
+        200:
+          description: Object patched successfully
+          examples:
+            application/json:
+              error: false
+              message: 'Object updated'
+        400:
+          description: Invalid Input
+          examples:
+            application/json:
+              error: true
+              message: Invalid JSON            
+
+  /create/thumbnail:
+    post:
+      tags:
+      - Create Thumbnail
+      summary: Create thumbnail
+      description: Create thumbnail from a public image URL
+      produces:
+      - application/json
+      parameters:
+      - name: image
+        in: formData
+        description: Image from a public URL
+        type: string
+        required: true
+      responses:
+        200:
+          description: Thumbnail generated successfully
+          examples:
+            application/json:
+              error: false
+              message: 'Successful'
+        400:
+          description: Invalid Input
+          examples:
+            application/json:
+              error: true
+              message: Invalid JSON  

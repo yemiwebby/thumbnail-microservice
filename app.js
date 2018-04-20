@@ -4,15 +4,15 @@ import logger from 'morgan';
 import bodyParser from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs';
-import routes from './server/routes/index';
+import routes from './src/routes/index';
 
-import AuthService from './server/service/authService';
+import AuthService from './src/service/authService';
 
 
 const app = express();
 
 // API DOCS
-const swaggerDocument= YAML.load(`${process.cwd()}/server/swagger.yaml`);
+const swaggerDocument= YAML.load(`${process.cwd()}/src/swagger.yaml`);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
