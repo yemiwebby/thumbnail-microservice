@@ -1,7 +1,7 @@
 import Jimp from "jimp";
 import path from "path";
 
-let upload_path_root = path.join(__dirname, "../../public/uploads");
+let upload_path_root = path.join(`${__dirname}../../public/uploads`);
 
 /**
  * @class Images

@@ -13,12 +13,10 @@ class AuthService {
      * @param {*} token 
      */
     static saveTokenToStorage(token) {
-        if(!localStorage) {
             if (token) {
                 localStorage.setItem('jwtToken', token);
                 return token;
             }
-        }
     }
 
     /**
