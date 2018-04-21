@@ -10,14 +10,14 @@ import validator from 'validator';
 const validateUserSignIn = (req, res, next) => {
     // check for empty fields
     if (!req.body.username || !req.body.password) {
-        return res.status(400).json({
+        return res.status(401).json({
             message: 'All or some of the field is/are undefined',
         });
     }
 
     // check for username
     if (validator.isEmpty(req.body.username)) {
-        return res.status(400).json({
+        return res.status(401).json({
             message: 'Username field is required',
         });
     }

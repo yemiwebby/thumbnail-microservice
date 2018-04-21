@@ -1,15 +1,51 @@
+import chaiHttp from 'chai-http';
 import chai from 'chai';
-import Images from '../controllers/images';
+import app from '../../app';
+// import 
 
-// const assert = require('chai').assert;
-// const Images = require('../controllers/images').sample;
+const { expect, assert, should } = chai;
+should();
 
-chai.assert();
+chai.use(chaiHttp);
 
-describe('Service', () => {
-    describe('sample()', () => {
-        it('Should return Hello', () => {
-            assert.equal(Images.sample(), 'Hello');
+let loginURL = '/api/v1/auth/login';
+
+describe('TEST for User Public Route', () => {
+    describe('When user sends a POST request to /api/v1/auth/login', () => {
+        it('It should return a status 200 and a response message', (done) => {
+            chai.request(app)
+            .post(loginURL)
+            .send({
+                username:'oluyemi',
+                password: 'oluyemi'
+            })
+            .end((err, res) => {
+                res.should.have.status(200);
+                expect(res.body).to.be.a('object');
+                assert.equal(
+                    res.body.message,
+                    'Logged in successfully'
+                );
+                done();
+            });
+        });
+
+        it('It should return a status 401 and a response message', (done) => {
+            chai.request(app)
+            .post(loginURL)
+            .send({
+                username: '',
+                password: ''
+            })
+            .end((err, res ) => {
+                res.should.have.status(401);
+                expect(res.body).to.be.a('object');
+                assert.equal(
+                    res.body.message,
+                    'All or some of the field is/are undefined'
+                );
+                done();
+            })
         })
-    })
+    });
 });
