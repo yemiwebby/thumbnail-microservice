@@ -4,8 +4,9 @@
   "description": "A stateless microservice for generating thumbnail",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "start": "nodemon app.js --exec babel-node --presets es2015,stage-2"
+    "test": "mocha ./src/test/ --compilers js:babel-core/register --exit",
+    "start": "nodemon app.js --exec babel-node --presets es2015,stage-2",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "stateless",
@@ -21,10 +22,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "istanbul": "^0.4.5",
     "jsonpatch": "^3.0.1",
     "jsonwebtoken": "^8.2.1",
     "mocha": "^5.1.0",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.1"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

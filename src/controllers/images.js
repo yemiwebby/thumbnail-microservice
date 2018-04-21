@@ -25,6 +25,10 @@ class Images {
             res.send("Error occurred");
         })
     }
+
+    static sample() {
+        return 'Hello';
+    }
 }
 
 
