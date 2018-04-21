@@ -12,10 +12,8 @@ const validateJsonObject = (req, res, next ) => {
             message: 'Json Object cannot be empty',
         });
     }
-
     next();
 };
-
 
 
 export default validateJsonObject;

@@ -8,7 +8,7 @@ import auth from '../middleware/auth';
 
 
 export default (app) => {
-    app.post('/auth/login', signInValidator, Users.signIn);
-    app.patch('/json/patch', auth, validateJsonObject,Json.applyPatch);
-    app.post('/create/thumbnail', auth, checkValidURl, Images.createThumbnail);
+    app.post('/api/v1/auth/login', signInValidator, Users.signIn);
+    app.patch('/api/v1/json/patch', auth, validateJsonObject,Json.applyPatch);
+    app.post('/api/v1/create/thumbnail', auth, checkValidURl, Images.createThumbnail);
 };
