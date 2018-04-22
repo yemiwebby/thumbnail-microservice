@@ -59,6 +59,20 @@ npm start
 npm test
 ```
 
+### Testing With Postman
+
+#### For Authentication
+
+![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
+
+#### For Patching a JSON Object
+
+![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
+
+#### For generating a thumbnail
+
+![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
+
 ### API Docs
 http://localhost:3000/api-docs/
 
