@@ -49,6 +49,13 @@ $ cd thumbnail-microservice
 $ npm install
 ```
 
+### Set up Private Key
+Create a new file in the root directory `.env` and add a secret Key
+
+```bash
+SECRET_KEY=YOUR_PRIVATE_KEY_HERE
+```
+
 ### Start the server
 ```bash
 npm start
@@ -66,10 +73,28 @@ npm test
 ![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
 
 #### For Patching a JSON Object
+Example: -
+
+```bash
+{
+	"object": {
+       "orders": [{"id": 123}, {"id": 456}, {"id": 789}],
+       "total": 20.00,
+       "currency": "USD"
+    },
+    
+    "patch": [
+      { "op": "add", "path": "/total", "value": 20.00 },
+      { "op": "add", "path": "/currency", "value": "USD" }
+    ]
+}    
+```
+
 
 ![Patch JSON](https://user-images.githubusercontent.com/19610753/39091395-f5dc5f4a-45ea-11e8-8750-f5cf24543654.gif)
 
 #### For generating a thumbnail
+Use a Valid Image URL
 
 ![Generate Thumbnail](https://user-images.githubusercontent.com/19610753/39091402-12dbd40e-45eb-11e8-9b57-bc9bdaa6e57c.gif)
 
