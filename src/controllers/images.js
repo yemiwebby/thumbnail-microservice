@@ -15,7 +15,6 @@ class Images {
      * 
      */
     static createThumbnail(req, res) {
-        console.log(upload_path_root);
         const newImage = `${upload_path_root}/newfile.jpg`;
         Jimp.read(req.body.image).then(image => [
             image.resize(50,50).quality(90).write(newImage),
