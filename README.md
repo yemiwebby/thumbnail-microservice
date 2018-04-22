@@ -67,14 +67,15 @@ npm test
 
 #### For Patching a JSON Object
 
-![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
+![Patch JSON](https://user-images.githubusercontent.com/19610753/39091395-f5dc5f4a-45ea-11e8-8750-f5cf24543654.gif)
 
 #### For generating a thumbnail
 
-![Authentication](https://user-images.githubusercontent.com/19610753/39090940-8ce7635c-45e2-11e8-8dbf-520d40ae7d8f.gif)
+![Generate Thumbnail](https://user-images.githubusercontent.com/19610753/39091402-12dbd40e-45eb-11e8-9b57-bc9bdaa6e57c.gif)
 
 ### API Docs
-http://localhost:3000/api-docs/
+After installing the application. Navigate to http://localhost:3000/api-docs/
+
 
 ### Author
 [Olususi Oluyemi](https://twitter.com/yemiwebby)

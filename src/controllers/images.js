@@ -1,7 +1,8 @@
 import Jimp from "jimp";
 import path from "path";
 
-let upload_path_root = path.join(`${__dirname}../../public/uploads`);
+let upload_path_root = path.join(`${__dirname}../../../public/uploads`);
+
 
 /**
  * @class Images
@@ -14,6 +15,7 @@ class Images {
      * 
      */
     static createThumbnail(req, res) {
+        console.log(upload_path_root);
         const newImage = `${upload_path_root}/newfile.jpg`;
         Jimp.read(req.body.image).then(image => [
             image.resize(50,50).quality(90).write(newImage),
