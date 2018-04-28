@@ -88,7 +88,6 @@ Example: -
 }    
 ```
 
-
 ![Patch JSON](https://user-images.githubusercontent.com/19610753/39091395-f5dc5f4a-45ea-11e8-8750-f5cf24543654.gif)
 
 #### For generating a thumbnail
@@ -98,7 +97,6 @@ Use a Valid Image URL
 
 ### API Docs
 After installing the application. Navigate to http://localhost:3000/api-docs/
-
 
 ### Author
 [Olususi Oluyemi](https://twitter.com/yemiwebby)
