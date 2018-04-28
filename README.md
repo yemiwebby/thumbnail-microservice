@@ -7,7 +7,6 @@ This platform provides a simple stateless microservice in Nodejs, with the follo
 * Image thumbnail generation
 
 
-
 ## Features
 
 * Users can login and receive a token to access the protected Routes
@@ -44,7 +43,6 @@ $ cd thumbnail-microservice
 ```
 
 ### Install Dependencies
-
 ```bash
 $ npm install
 ```
