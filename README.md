@@ -27,17 +27,18 @@ POST   |/api/v1/create/thumbnail|Accept a public URL and return a thumbnail
 Before proceeding with installation. Make sure you have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/)
 
 ### Create a parent project Directory
-
 ```bash
 mkdir projectFolder
 ```
 
 ### Clone the Repo
+
 ```bash
 $ git clone https://github.com/yemiwebby/thumbnail-microservice
 ```
 
 ### Navigate
+
 ```bash
 $ cd thumbnail-microservice
 ```
